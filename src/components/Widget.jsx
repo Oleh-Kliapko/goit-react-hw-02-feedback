@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { WrapperWidget } from './Widget.styled';
 import { FeedbackOptions } from './FeedbackOptions';
@@ -6,7 +6,7 @@ import { Statistics } from './Statistics';
 import { Box } from './Box';
 import { theme } from '../theme';
 
-export class Widget extends React.Component {
+export class Widget extends Component {
   static defaultProps = {
     initialGood: 0,
     initialNeutral: 0,
@@ -19,8 +19,6 @@ export class Widget extends React.Component {
     initialGood: PropTypes.number.isRequired,
     initialNeutral: PropTypes.number.isRequired,
     initialBad: PropTypes.number.isRequired,
-    total: PropTypes.number,
-    positivePercentage: PropTypes.number,
   };
 
   state = {
@@ -85,7 +83,7 @@ export class Widget extends React.Component {
           Please leave feedback
         </Box>
         <FeedbackOptions
-          onChangeGoodValue={this.changeGoodValue}
+          onChangeGoodValue={() => this.changeGoodValue()}
           onChangeNeutralValue={this.changeNeutralValue}
           onChangeBadValue={this.changeBadValue}
         />

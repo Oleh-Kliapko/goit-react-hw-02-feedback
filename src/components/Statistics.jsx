@@ -1,5 +1,5 @@
 import React from 'react';
-import { WrapperStatistics, Item } from './Widget.styled';
+import { WrapperStatistics, Item } from './Statistics.styled';
 import { Notification } from './Notification';
 
 export const Statistics = ({

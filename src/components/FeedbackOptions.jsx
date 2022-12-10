@@ -1,5 +1,5 @@
 import React from 'react';
-import { WrapperButton, Button } from './Widget.styled';
+import { WrapperButton, Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({
   onChangeGoodValue,

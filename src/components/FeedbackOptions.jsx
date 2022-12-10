@@ -8,13 +8,13 @@ export const FeedbackOptions = ({
 }) => {
   return (
     <WrapperButton>
-      <Button type="button" onClick={onChangeGoodValue}>
+      <Button id="good" type="button" onClick={onChangeGoodValue}>
         Good
       </Button>
-      <Button type="button" onClick={onChangeNeutralValue}>
+      <Button id="neutral" type="button" onClick={onChangeNeutralValue}>
         Neutral
       </Button>
-      <Button type="button" onClick={onChangeBadValue}>
+      <Button id="bad" type="button" onClick={onChangeBadValue}>
         Bad
       </Button>
     </WrapperButton>

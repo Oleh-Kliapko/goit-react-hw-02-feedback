@@ -27,27 +27,24 @@ export class Widget extends Component {
     bad: this.props.initialBad,
   };
 
-  changeGoodValue = () => {
+  changeValue = evt => {
     this.setState(prevState => {
-      return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-
-  changeNeutralValue = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
-  };
-
-  changeBadValue = () => {
-    this.setState(prevState => {
-      return {
-        bad: prevState.bad + 1,
-      };
+      switch (evt) {
+        case 'good':
+          return {
+            good: prevState.good + 1,
+          };
+        case 'neutral':
+          return {
+            neutral: prevState.neutral + 1,
+          };
+        case 'bad':
+          return {
+            bad: prevState.bad + 1,
+          };
+        default:
+          break;
+      }
     });
   };
 
@@ -69,7 +66,6 @@ export class Widget extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-
     return (
       <WrapperWidget>
         <Box
@@ -83,9 +79,12 @@ export class Widget extends Component {
           Please leave feedback
         </Box>
         <FeedbackOptions
-          onChangeGoodValue={() => this.changeGoodValue()}
-          onChangeNeutralValue={this.changeNeutralValue}
-          onChangeBadValue={this.changeBadValue}
+          onChangeGoodValue={evt => {
+            console.log('🚀  evt', evt);
+            return this.changeValue(evt.target.id);
+          }}
+          onChangeNeutralValue={evt => this.changeValue(evt.target.id)}
+          onChangeBadValue={evt => this.changeValue(evt.target.id)}
         />
         <Box
           fontSize={theme.typography.heading}

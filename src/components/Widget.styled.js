@@ -8,3 +8,11 @@ export const WrapperWidget = styled.section`
   margin: 0;
   padding-left: ${theme.space.main * 2}px;
 `;
+
+export const WrapperButton = styled.div`
+  display: flex;
+  gap: ${theme.space.main}px;
+  margin: 0;
+  margin-bottom: ${theme.space.main}px;
+  padding: 0;
+`;

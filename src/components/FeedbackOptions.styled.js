@@ -1,14 +1,6 @@
 import styled from '@emotion/styled';
 import { theme } from '../theme';
 
-export const WrapperButton = styled.div`
-  display: flex;
-  gap: ${theme.space.main}px;
-  margin: 0;
-  margin-bottom: ${theme.space.main}px;
-  padding: 0;
-`;
-
 export const Button = styled.button`
   padding: ${theme.space.secondary}px;
   padding-left: ${theme.space.secondary * 3}px;

@@ -16,3 +16,8 @@ export const WrapperButton = styled.div`
   margin-bottom: ${theme.space.main}px;
   padding: 0;
 `;
+
+export const WrapperStatistics = styled.div`
+  margin: 0;
+  padding: 0;
+`;

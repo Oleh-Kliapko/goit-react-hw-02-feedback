@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { WrapperWidget, WrapperButton } from './Widget.styled';
+import {
+  WrapperWidget,
+  WrapperButton,
+  WrapperStatistics,
+} from './Widget.styled';
 import { FeedbackOptions } from './FeedbackOptions';
 import { Statistics } from './Statistics';
 import { Box } from './Box';
@@ -79,13 +83,15 @@ export class Widget extends Component {
         >
           Statistics
         </Box>
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage()}
-        />
+        <WrapperStatistics>
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback()}
+            positivePercentage={this.countPositiveFeedbackPercentage()}
+          />
+        </WrapperStatistics>
       </WrapperWidget>
     );
   }

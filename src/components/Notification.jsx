@@ -5,4 +5,5 @@ export const Notification = () =>
     timeout: 2000,
     fontSize: '22px',
     position: 'center-center',
+    cssAnimationStyle: 'zoom',
   });

@@ -11,14 +11,6 @@ import { Box } from './Box';
 import { theme } from '../theme';
 
 export class Widget extends Component {
-  static defaultProps = {
-    initialGood: 0,
-    initialNeutral: 0,
-    initialBad: 0,
-    total: 0,
-    positivePercentage: 0,
-  };
-
   static defaultPropTypes = {
     initialGood: PropTypes.number.isRequired,
     initialNeutral: PropTypes.number.isRequired,

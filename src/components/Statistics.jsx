@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Item } from './Statistics.styled';
 import { Notification } from './Notification';
 
@@ -22,4 +23,9 @@ export const Statistics = ({
   } else {
     return <Notification />;
   }
+};
+
+Statistics.propTypes = {
+  total: PropTypes.number,
+  onLeaveFeedback: PropTypes.number,
 };

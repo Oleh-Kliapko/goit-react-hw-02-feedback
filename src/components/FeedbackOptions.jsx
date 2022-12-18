@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
@@ -7,4 +8,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
       {option.charAt(0).toUpperCase() + option.slice(1)}
     </Button>
   ));
+};
+
+FeedbackOptions.propTypes = {
+  options: PropTypes.array.isRequired,
+  onLeaveFeedback: PropTypes.func,
 };
